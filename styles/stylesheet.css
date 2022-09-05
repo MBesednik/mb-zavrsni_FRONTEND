@@ -1,0 +1,391 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: rgb(60, 60, 60);
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+.row {
+  width: 70vw;
+  min-height: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.row-center {
+  display: flex;
+  justify-content: center;
+}
+
+.blok {
+  width: 95%;
+  min-height: 15rem;
+  margin: 2rem 0 2rem 0;
+  border-radius: 10px;
+  background-color: #ffffff;
+  /* background-color: #e9e9e9; */
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+/* ---------- BLOK 1 PODACI ---------- */
+
+.blok-podaci {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+}
+
+.blok-podaci__info {
+  text-align: center;
+}
+
+.blok-podaci__user-name {
+  padding-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.blok-podaci__info > ul > li {
+  list-style-type: none;
+  /* padding: 0.5rem 0 0.5rem 0; */
+}
+
+.blok-podaci__gumbi {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* ---------- BLOK 2 GRAFOVI ---------- */
+
+.blok-grafovi {
+  padding: 0rem;
+}
+
+.blok-grafovi__1 {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+}
+
+.blok-grafovi__gumbi {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.blok-grafovi__gumbi > input {
+  margin-bottom: 1rem;
+  margin: 15px 0 15px 0;
+  height: 1.6rem;
+  border: 1px solid #b1aeae;
+  border-radius: 5px;
+}
+
+h3.blok-podaci_-name1 {
+  padding-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+/* CANVAS */
+
+.graf {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+/* ---------- BLOK 3 VJEŽBE ---------- */
+
+.blok-vjezbe {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+}
+
+.blok-vjezbe__dani {
+  text-align: center;
+}
+
+.blok-vjezbe__dani #trenutni-dan {
+  /* padding-bottom: 1.2rem; */
+  font-size: 1.8rem;
+}
+
+.blok-vjezbe__dani #container-vjezbe > ul > li {
+  list-style-type: none;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.blok-vjezbe__gumbi {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.blok-vjezbe__gumbi > a {
+  display: block;
+}
+
+/* MODAL */
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.25s ease;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  width: 850px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.modal h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  position: relative;
+  top: -30px;
+}
+
+.modal input {
+  margin: 15px 0 15px 0;
+  width: 10rem;
+  height: 2rem;
+  border: 1px solid #b1aeae;
+  border-radius: 5px;
+}
+
+.modal textarea {
+  border: 1px solid #b1aeae;
+  border-radius: 5px;
+}
+
+/* TABLICA U MODALU */
+
+table {
+  margin: 1.5rem 0 2rem 0;
+}
+
+table tr th {
+  padding-bottom: 1rem;
+}
+
+table tr td {
+  padding: 0 1rem 0 1rem;
+}
+
+.fa-close {
+  position: relative;
+  left: 380px;
+  transition: color 0.15s ease;
+}
+
+.fa-close:hover {
+  color: #2d9bf0;
+}
+
+/* GUMB */
+.btn {
+  width: 12rem;
+  height: 2.5rem;
+  border: 1px solid #b1aeae;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: #2d9bf0 1px solid;
+}
+
+/* ---------------------------------------- STRANICA VJEŽBE ---------------------------------------- */
+
+.blok .blok-table table {
+  text-align: center;
+}
+
+.blok-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blok-table > table {
+  width: 60%;
+}
+
+.blok-table__title {
+  font-size: 1.5rem;
+}
+
+.blok-table > table > tbody > tr > td {
+  padding: 1.5rem 0 1.5rem 0;
+  font-size: 1.2rem;
+}
+
+#generiranje-grafa {
+  width: 100%;
+}
+
+.blok-naslov {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+}
+
+#blok-naslov h3 {
+  font-size: 2.5rem;
+  padding: 2rem 0 1.5rem 0;
+}
+
+.blok-naslov .line {
+  width: 60%;
+  display: inline-block;
+  margin: 2rem 0 1.5rem 0;
+  padding: 0;
+}
+
+.blok-naslov > p {
+  font-size: 1.2rem;
+}
+
+#dateRange {
+  font-size: 1.2rem;
+}
+
+/* ---------- BLOK FORMA ---------- */
+.blok-form {
+  text-align: center;
+  width: 105%;
+}
+
+.blok-title {
+  display: inline-block;
+  font-size: 2.3rem;
+  padding: 2.1rem 0 2.1rem 0;
+  width: 30rem;
+  font-weight: bold;
+}
+
+.blok-form > form > #search {
+  display: inline-block;
+  width: 20rem;
+  height: 1.6rem;
+  border: 1px solid #b1aeae;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.blok-form > form > #search::placeholder {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.blok-icon {
+  display: inline-block;
+  position: absolute;
+  right: 16.5%;
+}
+
+.blok-icon > i {
+  font-size: 2rem;
+  padding: 7px;
+}
+
+.icons {
+  display: inline-block;
+  position: absolute;
+  right: 17.5%;
+  top: 10%;
+}
+
+.icons > i {
+  font-size: 2rem;
+  padding: 7px;
+}
+
+.hide-blok {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show-blok {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- NAVIGACIJA ---------- */
+
+.layout-blok {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-column {
+  position: fixed;
+  background-color: #2a2c30;
+  width: 5rem;
+  height: 90vh;
+  margin: 2rem;
+  border-radius: 10px;
+  box-shadow: rgb(17 17 26 / 5%) 0px 1px 0px, rgb(17 17 26 / 10%) 0px 0px 8px;
+
+  /* FLEXBOX */
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-column > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 1.3rem;
+}
+
+.nav-column a {
+  color: #fff;
+}
+
+/* ---------- FONT AWESOME ---------- */
+
+i.fa.fa-home:before,
+i.fa.fa-child:before,
+i.fa.fa-bar-chart:before {
+  color: #fff;
+  font-size: 1.6rem;
+}

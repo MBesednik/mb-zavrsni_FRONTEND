@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TITLE ICON -->
+    <link rel="shortcut icon" href="../images/title-icon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/stylesheet.css" />
+
+    <!--FA ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Vježbe</title>
+
+    <!-- WEB COMPONENTS -->
+    <script src="../web components/nav-menu.js"></script>
+    <script src="../web components/big-title.js"></script>
+    <script src="../web components/workout-weekly-info.js"></script>
+   
+
+  </head>
+  <body>
+    <div class="layout-blok">
+
+      <!-- TEMPLATE -->
+      <template id="nav-template">
+        <!-- CSS -->
+        <link rel="stylesheet" href="../styles/stylesheet.css" />
+
+        <!--FA ICON -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <div class="nav-column"></div>
+      </template>
+      <nav-menu></nav-menu>
+      <div class="row" id="row">
+      <div id="unesi_korake"></div>
+          <div class="blok-form">
+                     <big-title title = "Sve vježbe"></big-title>
+            <form action="?" method="post" id="search">
+              <input
+                type="text"
+                id="search"
+                name="search"
+                placeholder="Pretraži"
+              />
+              <div class="blok-icon" id="blok-icon">
+                <i
+                  class="fa fa-arrow-circle-left"
+                  id="left"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fa fa-arrow-circle-right"
+                  id="right"
+                  aria-hidden="true"
+                ></i>
+              </div>
+            </form>
+          </div>
+            <div id="blok-proba" class="blok-form"></div>
+        </div>
+      </div>
+    </div>
+  
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/js-loading-overlay@1.1.0/dist/js-loading-overlay.min.js"></script>
+    <script src="../scripts/utils/dateUtils.js"defer></script>
+    <script src="../scripts/utils/const.js" defer></script>
+    <script src="../scripts/utils/grapql.js" defer></script>
+    <script src="../scripts/workouts/workouts.js" defer></script>
+  </body>
+</html>

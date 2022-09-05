@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TITLE ICON -->
+    <link rel="shortcut icon" href="../images/title-icon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/stylesheet.css" />
+
+    <!--FA ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- CANVAS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <!-- WEB COMPONENTS -->
+    <script src="../web components/nav-menu.js"></script>
+    <script src="../web components/big-title.js"></script>
+    <script src="../web components/graph-info-weekly.js"></script>
+    <script src="../web components/graph-info-monthly.js"></script>
+     <script src="../web components/error-msg.js"></script>
+   
+
+    <title>Grafovi</title>
+  </head>
+  <body>
+    <div class="layout-blok">
+      <!-- TEMPLATE -->
+      <template id="nav-template">
+        <!-- CSS -->
+        <link rel="stylesheet" href="../styles/stylesheet.css" />
+
+        <!--FA ICON -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <div class="nav-column"></div>
+      </template>
+      <nav-menu></nav-menu>
+
+      <div class="row row-center" id="row">
+      
+        <div class="blok-form">
+          <big-title title = "Svi grafovi"></big-title>
+          <p id="dateRange"></p>
+            <div class="icons">
+              <i
+                class="fa fa-arrow-circle-left"
+                id="left"
+                aria-hidden="true"
+              ></i>
+              <i
+                class="fa fa-arrow-circle-right"
+                id="right"
+                aria-hidden="true"
+              ></i>
+            </div>
+          </form>
+        </div>
+        <div id="generiranje-grafa"></div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/js-loading-overlay@1.1.0/dist/js-loading-overlay.min.js"></script>
+    <script src="../scripts/utils/dateUtils.js"></script>
+    <script src="../scripts/graph/chartFunctions.js"></script>
+    <script src="../scripts/utils/const.js"></script>
+    <script src="../scripts/utils/grapql.js"></script>
+    <script src="../scripts/graph/graf.js"></script>
+  </body>
+</html>
